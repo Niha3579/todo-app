@@ -4,8 +4,14 @@ pipeline {
         stage('Build'){
             steps{
                 script{
-                    bat "docker login"
-                    bat "docker build -t week9image ."
+                    bat "docker build -todoapp ."
+                }
+            }
+        }
+        stage('run'){
+            steps{
+                script{
+                    echo "running."
                 }
             }
         }
